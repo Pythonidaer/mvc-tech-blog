@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MVC Tech Blog</title>
+</head>
+
+<body>
+  <div class="wrapper">
+      <header class="hero">
+          <div>
+            <nav class"nav">
+                    <a class="link" href="/">Home</a>
+                    <a class="link" href="/dashboard">Dashboard</a>
+                    {{#if loggedIn}}
+                    <a class="link" href="/" id="logout">Logout</a>
+                    {{else}}
+                    <a class="link" href="/login">Login</a>
+                    {{/if}}
+                </nav>          
+          </div>
+
+          <h1>The Bootcamp Grad Hire Project</h1>
+      </header>
+
+    <main>
+      {{{ body }}}
+    </main>
+  </div>
+
+    {{#if loggedIn}}
+    <script src="/js/logout.js"></script>
+    {{/if}}
+
+</body>
+
+</html>
