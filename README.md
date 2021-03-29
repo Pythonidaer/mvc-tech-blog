@@ -54,7 +54,7 @@ This project was created under the MIT License.
 -----------
 
 ## Resources
-[]()
+[Sequelize Model Configuring](https://sequelize.org/v5/manual/models-definition.html#configuration)
  
 []()
  

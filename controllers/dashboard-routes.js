@@ -1,17 +1,12 @@
+const router = require('express').Router();
 const sequelize = require('../config/connection');
 const { Post, User, Comment } = require('../models');
-const router = require('express').Router();
-
-// router.get('/', async (req, res) => {
-//     try {
-//         await res.render('homepage');
-//     } catch (err) {
-//         res.status(500).json(err);
-//       }
-// });
-
-router.get('/', (req, res) => {
+const withAuth = require('../utils/auth');
+router.get('/', withAuth, (req, res) => {
     Post.findAll({
+            where: {
+                user_id: req.session.user_id
+            },
             attributes: [
                 'id',
                 'title',
@@ -34,14 +29,16 @@ router.get('/', (req, res) => {
         })
         .then(dbPostData => {
             const posts = dbPostData.map(post => post.get({ plain: true }));
-            // res.render('homepage', { posts, loggedIn: req.session.loggedIn });
-            console.log(posts);
-            res.render('homepage', { posts });
+            // res.render('dashboard', { posts, loggedIn: true });
+            res.render('dashboard');
         })
         .catch(err => {
             console.log(err);
             res.status(500).json(err);
         });
 });
+
+
+
 
 module.exports = router;
