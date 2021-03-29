@@ -1,6 +1,6 @@
 # Tech Blog
 
-# ORM E-Commerce Practice
+# Model View Controller Practice
 [![License](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT)
 
 ## Description 
