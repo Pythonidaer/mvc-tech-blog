@@ -1,8 +1,7 @@
 <article class="post">
    <div class="card-header">
        <h4><a class="link" href="/post/{{id}}">{{title}}</a></h4>
-        <p>Posted by {{user.username}} on {{format_date created_at}}</p>
-        {{!-- <p>Posted by {{user.username}} on {{created_at}}</p> --}}
+        <p>Posted by {{post.user.username}} on {{post.created_at}}</p>
     </div>
-        <p class="card-body">{{content}}</p>
+        <p class="card-body">{{post.content}}</p>
 </article>
