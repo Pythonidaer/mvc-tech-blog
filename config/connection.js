@@ -2,17 +2,27 @@ const Sequelize = require('sequelize');
 
 require('dotenv').config();
 
-let sequelize;
+// let sequelize;
 
-if (process.env.JAWSDB_URL) {
-    sequelize = new Sequelize(process.env.JAWSDB_URL);
-    // console.log('jaws');
-} else {
-    sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PW, {
-        host: 'localhost',
-        dialect: 'mysql',
-        port: 3306
-    });
-    // console.log('local');
-}
+// if (process.env.JAWSDB_URL) {
+//     sequelize = new Sequelize(process.env.JAWSDB_URL);
+//     console.log('jaws');
+// } else {
+//     sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PW, {
+//         host: 'localhost',
+//         dialect: 'mysql',
+//         port: 3306
+//     });
+//     console.log('local');
+// }
+
+
+const sequelize = process.env.JAWSDB_URL ? new Sequelize(process.env.JAWSDB_URL) : new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PW, {
+    host: 'localhost',
+    dialect: 'mysql',
+    dialectOptions: {
+        decimalNumbers: true,
+    },
+});
+
 module.exports = sequelize;
