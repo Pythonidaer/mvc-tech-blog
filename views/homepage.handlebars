@@ -1,7 +1,7 @@
 <article class="post">
-   <div class="card-header">
-       <h4><a class="link" href="/post/{{id}}">{{title}}</a></h4>
-        <p>Posted by {{post.user.username}} on {{post.created_at}}</p>
-    </div>
-        <p class="card-body">{{post.content}}</p>
+
+    {{#each posts as |post| }}
+        {{> post-info post}}
+    {{/each}}
+
 </article>

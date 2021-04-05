@@ -42,7 +42,7 @@ router.get('/', (req, res) => {
             console.log(posts);
             console.log('------------------------------------------');
             // giving an obj w/ a prop called posts that is and array of obj(post objects)
-            res.render('homepage', { post: posts[0] });
+            res.render('homepage', { posts });
         })
         .catch(err => {
             console.log(err);

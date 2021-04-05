@@ -12,6 +12,10 @@ const userData = [{
     {
         username: 'JefferyD',
         password: 'CannibalCorpse!58'
+    },
+    {
+        username: 'RecklessRalph',
+        password: 'Wanderburger29'
     }
 ];
 
