@@ -56,17 +56,17 @@ This project was created under the MIT License.
 ## Resources
 [Sequelize Model Configuring](https://sequelize.org/v5/manual/models-definition.html#configuration)
  
-[]()
+[What is express-sessions](https://alialhaddad.medium.com/the-basics-of-express-sessions-and-why-to-use-it-4acf0b0cbaf1)
  
-[]()
+[Connect Session Store using Sequelize](https://www.npmjs.com/package/connect-session-sequelize)
  
-[]()
+[express-session](https://www.npmjs.com/package/express-session)
  
-[]()
+[Status Code Definitions](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)
  
-[]()
+[Bootstrap 5 Login Example](https://getbootstrap.com/docs/5.0/examples/sign-in/)
  
-[]()
+[MDN HTTP Status Docs](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500)
  
 []()
  
