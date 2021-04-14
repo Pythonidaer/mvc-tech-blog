@@ -15,7 +15,10 @@ const router = require('express').Router();
 
 // on home page, find all posts
 router.get('/', (req, res) => {
+// read the whole table from the db with the findAll method
     Post.findAll({
+// to select only some attributes, use the attributes option
+// most often, you pass an array
         attributes: [
             'id',
             'title',
@@ -72,8 +75,11 @@ router.get('/signup', (req, res) => {
 
 // when a user clicks on a post on the home page, view it
 // eventually this will be where a user can add comments
+// search for a single instance
 router.get('/post/:id', (req, res) => {
     Post.findOne({
+// limit query to only load the Post of the id selected
+// multiple where filter checks can be passed
             where: {
                 id: req.params.id
             },

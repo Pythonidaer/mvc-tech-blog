@@ -80,6 +80,7 @@ router.get('/:id', (req, res) => {
 
 // After user submits a new post, connect user session then get above
 router.post('/', withAuth, (req, res) => {
+    // creates a new Post model instance and calls save on it
     Post.create({
             title: req.body.title,
             content: req.body.content,

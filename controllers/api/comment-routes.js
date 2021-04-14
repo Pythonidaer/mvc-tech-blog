@@ -33,6 +33,7 @@ router.get('/:id', (req, res) => {
 // When a loggedIn user posts a comment, store text, post and user ids
 router.post('/', withAuth, (req, res) => {
     if (req.session) {
+        // Builds a new comment model instance and saves it
         Comment.create({
                 comment_text: req.body.comment_text,
                 post_id: req.body.post_id,
