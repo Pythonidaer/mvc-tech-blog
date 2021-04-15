@@ -40,6 +40,7 @@ router.get('/', (req, res) => {
         ]
     })
     // map response to remove extra Sequelize model crap
+// .then() makes the result of the Promise available to us
         .then(dbPostData => {
             // console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
             // console.log(dbPostData)

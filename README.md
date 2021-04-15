@@ -36,7 +36,7 @@ This project is hosted on Heroku and utilizes JawsDB. The .env is not uploaded t
 -----------
 
 ## Usage 
- 
+You are free to use this for learning purposes. The idea is not my own save for some light creative design. This was a homework for Trilogy Full Stack Developer coding bootcamp associated with the University of New Hampshire.
 
 -----------
 
@@ -46,12 +46,19 @@ This project was created under the MIT License.
 -----------
 
 ## Contributing 
- 
+I am not looking for contributors, but please reach out to me if you are looking for contributors on projects. I may be able to help out with HTML/CSS/JavaScript or perhaps some debugging.
 
 -----------
 
 ## Tests 
- 
+There are no tests for this.
+1. Git Clone
+2. npm install
+3. node seeds/index.js
+4. read the package.json!
+5. node server.js and test on your local host
+
+If at this point you are unable to get the project up and running, feel free to reach out.
 
 -----------
 
@@ -83,8 +90,20 @@ This project was created under the MIT License.
 [Sequelize Model Basics](https://sequelize.org/master/manual/model-basics.html)
 
 [Sequelize Getters and Setters](https://sequelize.org/master/manual/getters-setters-virtuals.html)
- 
 
+[Sequelize Hooks](https://sequelize.org/v3/docs/hooks/)
+
+[Async/Await](https://stackoverflow.com/questions/43422932/async-await-always-returns-promise#:~:text=The%20await%20statement%20operates%20on,resolve%20s%20or%20reject%20s.&text=log%20on%20the%20result%20of,unwrap%20the%20Promise%20for%20you.)
+
+[MDN Docs: Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+
+[JavaScript Modules](https://stackify.com/node-js-module-exports/#:~:text=Module%20exports%20are%20the%20instruction,to%20access%20the%20exported%20code.)
+
+[Sequelize Dialect Specific Things](https://sequelize.org/master/manual/dialect-specific-things.html)
+
+[process.env](https://codeburst.io/process-env-what-it-is-and-why-when-how-to-use-it-effectively-505d0b2831e7#:~:text=The%20process.,env.)
+ 
+[Fix for Sequelize turning floats into strings](https://github.com/sequelize/sequelize/issues/8019)
  
 -----------
 

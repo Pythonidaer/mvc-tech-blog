@@ -95,10 +95,13 @@ router.post('/', withAuth, (req, res) => {
 
 // when user clicks 'update' button, replace post-id data with new
 router.put('/:id', withAuth, (req, res) => {
+// Update multiple instances that match the where options
     Post.update({
+// hash of values to update
             title: req.body.title,
             content: req.body.content
         }, {
+// options to be met within the where attribute
             where: {
                 id: req.params.id
             }
@@ -117,6 +120,7 @@ router.put('/:id', withAuth, (req, res) => {
 
 // when user clicks 'delete' button, remove record from database entirely
 router.delete('/:id', withAuth, (req, res) => {
+// Delete multiple instances, in this case just where the id has been selected. On a post/:id page, clicking the delete button will trigger the front end form that will ship a delete request back here
     Post.destroy({
         where: {
             id: req.params.id
